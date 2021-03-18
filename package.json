@@ -19,9 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server":"node server.js",
-    "alles" : "run-s build "
-  
+    "server": "node server.js",
+    "alles": "run-s build server"
   },
   "eslintConfig": {
     "extends": [
