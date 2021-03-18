@@ -5,12 +5,12 @@ function App() {
 
   const [teilnehmer, setTeilnehmer] = useState([]);
 
-  useEffect(() => {    
+  useEffect(() => {  
     if (teilnehmer.length===0) {
-      fetch("/teilnehmer").then( (Response) => {
-   
-        Response.json().then( antwort => {
-          const leute = antwort;
+      fetch("/teilnehmer").then( (httpResponse) => {
+        
+        httpResponse.json().then( antwortObjekt => {
+          const leute = antwortObjekt;
           setTeilnehmer(leute);
         })
       }).catch( fehler => { console.error(fehler)});
@@ -20,9 +20,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-         eli-react-server
-        </p>
+        <p>eli-react-server </p>
         <ul>
           {teilnehmer.map( (einTeilnehmer) => {
             return <li>{einTeilnehmer}</li>

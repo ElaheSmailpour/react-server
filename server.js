@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static("public"))
 
 
-app.get("/teihnehmer", (req,res,next) => {
+app.get("/teilnehmer", (req,res,next) => {
     res.status(200).json(["Elahe","Elika","Elnaz", "Mehdi", "Thomas"]);
 })
 
